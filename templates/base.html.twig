@@ -8,10 +8,25 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+            <header class="d-flex">
+                <div class="menu-top-left"><a href="https://www.facebook.com/groups/303603153028242/"><img src="{{ asset('image/logo-site.png') }}" alt=""></a></div>
+            </header>
+            <div class="menu-burger" id="menu-burger"><img src="{{ asset('image/openMenu.png') }}" alt=""></div>
+            <div class="menu-left" id="menu-left">
+                <div class="menu-closed" id="menu-closed"><img src="{{ asset('image/closed.png') }}" alt=""></div>
+                
+                    <a href="">Acceuil</a>
+                    <a href="">Recettes</a>
+                    <a href="">Se connecter</a>
+                    <a href="">Déconnexion</a>  
+                
+            </div>
+         {% endblock %}
         {% block javascripts %}
-        <script type="text/javascript" src="{{ asset('build/runtime.js') }}"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="{{ asset('build/js/app.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/runtime.js') }}"></script>
         {% endblock %}
     </body>
 </html>
