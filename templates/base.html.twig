@@ -10,18 +10,19 @@
     <body>
         {% block body %}
             <header class="d-flex">
-                <div class="menu-top-left"><a href="https://www.facebook.com/groups/303603153028242/"><img src="{{ asset('image/logo-site.png') }}" alt=""></a></div>
+                <div class="menu-top"><a href="https://www.facebook.com/groups/303603153028242/"><img src="{{ asset('image/logo-site.png') }}" alt=""></a></div>
             </header>
             <div class="menu-burger" id="menu-burger"><img src="{{ asset('image/openMenu.png') }}" alt=""></div>
-            <div class="menu-left" id="menu-left">
-                <div class="menu-closed" id="menu-closed"><img src="{{ asset('image/closed.png') }}" alt=""></div>
-                
+            <div class="submenu-top" id="submenu-top">
                     <a href="">Acceuil</a>
-                    <a href="">Recettes</a>
-                    <a href="">Se connecter</a>
+                    <a href="">Liste des recettes</a>
+                    <a href="">Connexion</a>
+              {# {% if app.users %} #}
                     <a href="">Déconnexion</a>  
+              {# {% endif %} #}
                 
             </div>
+            <div class="menu-closed" id="menu-closed"><img src="{{ asset('image/closed.png') }}" alt=""></div>
          {% endblock %}
         {% block javascripts %}
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

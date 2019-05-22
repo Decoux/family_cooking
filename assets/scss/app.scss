@@ -6,11 +6,15 @@ html{
         height: 100%;
 
         header{
+            z-index: 3;
+            position: relative;
             background-color: gray;
             justify-content: center;
             width: 100%;
             height: 100px;
-            .menu-top-left{
+            
+            .menu-top{
+
                 width: 99px;
                 height: 99px;
                 a{
@@ -22,11 +26,13 @@ html{
             }
             
         }
-        .menu-left{
-            position: absolute;
-            left: -250px;
+        .submenu-top{
+            
             padding: 0px;
             background-color: white;
+            position: relative;
+            width: 100%;
+            top: -180px;
             a:hover{
                 text-decoration: none;
                 background-color: gray;
@@ -34,6 +40,7 @@ html{
                 
             }
             a{
+                top: 100px;
                 color: black;
                 font-weight: bold;
                 width: 100%;
@@ -50,10 +57,11 @@ html{
             
         }
         .menu-closed{
+            display: none;
+            position: absolute;
             width: 50px;
             height: 50px;
-            position: absolute;
-            left: 200px;
+            right: 0;
             img{
                 width: 100%;
             }
@@ -62,6 +70,7 @@ html{
             position: absolute;
             width: 50px;
             height: 50px;
+            right: 5px;
             img{
                 width: 100%;
             }

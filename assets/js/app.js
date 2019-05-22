@@ -1,38 +1,39 @@
 $( document ).ready(function() {
     var menuOpen = false;
-
     
 
+    
+    $('#menu-burger').click(function(){
         if(menuOpen == false){
-
-            $('#menu-burger').click(function(){
-                $('#menu-left').clearQueue().animate({
-                    left: "0",
-                    width: "200px",
-                    height: "100vh"
+                $('#submenu-top').clearQueue().animate({
+                    top: "0px"
                 })
-                $('body').css({
-                    overflow: 'hidden',
-                    height: '100%'
-                });
                 $(this).fadeOut(200);
                 $('#menu-closed').fadeIn(200);
+                $('#menu-closed').show();
+                menuOpen = true;
+            }
             })
+            
 
-            menuOpen = true;
+        
 
-        }
-
-        if(menuOpen == true){
-
-            $('#menu-closed').click(function(){
-                $('#menu-left').clearQueue().animate({
-                    left: "-250px",
+        
+        
+        $('#menu-closed').click(function(){
+            
+            if(menuOpen == true){
+             
+                
+                $('#submenu-top').clearQueue().animate({
+                    top: "-180px",
                 })
                 $(this).fadeOut(200);
                 $('#menu-burger').fadeIn(200);
+                menuOpen = false;
+            }
             })
-        }
+
     
     
 });
