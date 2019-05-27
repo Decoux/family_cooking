@@ -2,11 +2,13 @@
 html{
     height: 100vh;
     body {
+        display: flex;
+        flex-direction: column;
         background-color: lightgray;
         height: 100%;
-
+        
         header{
-            z-index: 3;
+            z-index: 1;
             position: relative;
             background-color: gray;
             justify-content: center;
@@ -27,12 +29,16 @@ html{
             
         }
         .submenu-top{
-            
+            position: relative;
+            top: -226px;
             padding: 0px;
             background-color: white;
-            position: relative;
             width: 100%;
-            top: -180px;
+            ol{
+                list-style: none;
+                padding-left: 0; 
+                margin-bottom: 0rem;       
+            }
             a:hover{
                 text-decoration: none;
                 background-color: gray;
@@ -54,7 +60,7 @@ html{
             
                 
                 
-            
+             
         }
         .menu-closed{
             display: none;
@@ -62,6 +68,7 @@ html{
             width: 50px;
             height: 50px;
             right: 0;
+            z-index: 1;
             img{
                 width: 100%;
             }
@@ -71,12 +78,35 @@ html{
             width: 50px;
             height: 50px;
             right: 5px;
+            top: 100px;
+            z-index: 1;
             img{
                 width: 100%;
             }
         }
-
+       
+        main{
+            margin-top: -175px;
+            #container_forms{
+                #form_recipe, #form_step, #form_ingredient{
+                    .form-group{
+                        width: 100%;
+                    }
+                    .input{
+                        height: 45px;
+                    
+                    }
+                    .ingredient_more, .step_more{
+                        margin-top: 32px;
+                        margin-bottom: 16px;
+                    }
+                    .step_delete{
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
         
-            
+    
     }
 }

@@ -9,11 +9,22 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ConnectController extends AbstractController
 {
     /**
-     * @Route ("/", name="connect")
+     * @Route ("/connect", name="connect")
      *
      * @return void
      */
     public function connect(): Response{
         return $this->render('pages/connect.html.twig');
+    }
+
+
+    /**
+     * @Route("/", name="home")
+     *
+     * @return void
+     */
+    public function home(){
+        return $this->render('pages/home.html.twig');
+
     }
 }

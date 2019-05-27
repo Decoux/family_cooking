@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editer une recette!{% endblock %}
+
+{% block body %}
+<main class="" id="main">
+    <div class="d-flex flex-column" id="container_forms">
+    <div class="p-5 col-md-12" id="form_recipe">
+    {{ form_start(formRecipe) }}
+    <h1 class="text-center">Recette</h1>
+
+    <div class="form-group">
+        <label for="">Nom : </label>
+        {{ form_widget(formRecipe.name) }}
+    </div>
+    <div class="form-group">
+            <label for="">Image : </label>
+            {{ form_widget(formRecipe.picture) }}
+        </div>
+        <div class="form-group">
+                <label for="">Type : </label>
+                {{ form_widget(formRecipe.type) }}
+            </div>
+            <div class="form-group">
+                    <label for="">Difficulté : </label>
+                    {{ form_widget(formRecipe.difficulty) }}
+                </div>
+                <div class="form-group">
+                        <label for="">Coût : </label>
+                        {{ form_widget(formRecipe.cost) }}
+                    </div> 
+                    <div class="form-group">
+                            <label for="">Temps de préparation : </label>
+                            {{ form_widget(formRecipe.preparation_time) }}
+                        </div>
+                       
+                        <div class="form-group">
+                                <label for="">Temps de cuisson : </label>
+                                {{ form_widget(formRecipe.cooking_time) }}
+                            </div>
+                            <div class="form-group">
+                                    <div><label for="">Pour : </label>
+                                        {{ form_widget(formRecipe.nb) }}</div>
+                                        <div class=""><label for="">Unité : </label>
+                                            {{ form_widget(formRecipe.unite) }}</div>
+                                    </div>
+                                </div>
+                                 <button class="btn btn-success p-5 font-weight-bold">Enregistrer</button>
+                            {{ form_end(formRecipe) }}
+    {# {{ form_start(formStep) }}
+    {{ form_start(formIngredient) }}
+                                
+                                <div class="mt-5 d-flex " id="container_step_ingredient">
+                                <div class="col-md-6">
+                                    <h1 class="text-center">Etape</h1>
+                                    <div class="mt-5 p-5 d-flex flex-column" id="form_step">
+                                <div class="form-group" id="group_step0">
+                                        <label for="">Etape : </label>
+                                        {{ form_widget(formStep.content_step, {'full_name': 'form[content_step][]'}) }}
+                                   
+                                            <label for="">Photo : </label>
+                                            {{ form_widget(formStep.picture_step, {'full_name': 'form[picture][]'}) }}
+                                        <button type="button" id="step-btn" class="step_more btn btn-info">+</button>
+                                        <button type="button" id="step-btn-delete"  class="step_delete btn btn-danger">-</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">                                <h1 class="text-center">Ingredient</h1>
+
+                                <div class="mt-5 p-5 d-flex flex-column" id="form_ingredient">
+                                <div class="form-group" id="group_ingredient0">
+                                        <label for="">Ingredient : </label>
+                                        {{ form_widget(formIngredient.content_ingredient, {'full_name': 'form[content_ingredient][]'}) }}
+                                   
+                                            <label for="">Quantité : </label>
+                                            {{ form_widget(formIngredient.quantity, {'full_name': 'form[quantity][]'}) }}
+                                        <button type="button"  id="ingredient-btn" class="ingredient_more btn btn-info">+</button>
+                                        <button type="button" id="ingredient-btn-delete"  class="step_delete btn btn-danger">-</button>
+                                        </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            {{ form_end(formStep) }}
+
+                            {{ form_end(formIngredient) }} #}
+
+                        </div>
+                                    
+</main>
+{% endblock %}
